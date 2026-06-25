@@ -9,7 +9,7 @@ services:
     image: nginx:1.25-alpine
     container_name: effective-nginx
     ports:
-      - "8000:80"
+      - "${NGINX_PORT}:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
     depends_on:
